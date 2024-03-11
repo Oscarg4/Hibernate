@@ -11,6 +11,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderBy;
 import javax.persistence.Table;
 
 @Entity
@@ -18,7 +19,7 @@ import javax.persistence.Table;
 public class Bodega {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name = "id", unique = true, nullable = true)
 	private int id_bodega;
 	
@@ -27,6 +28,7 @@ public class Bodega {
 	
 	@OneToMany
     @JoinColumn(name = "bodega_id")
+	@OrderBy("id asc")
 	private List<Vid> vids;
 	
 	public Bodega() {}
