@@ -38,6 +38,26 @@ public class Bodega {
 		this.vids = new ArrayList<>();
 	}
 
+	public int getId_bodega() {
+		return id_bodega;
+	}
+
+	public void setId_bodega(int id_bodega) {
+		this.id_bodega = id_bodega;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public void setVids(List<Vid> vids) {
+		this.vids = vids;
+	}
+
 	@Override
 	public String toString() {
 		return "Bodega [id_bodega=" + id_bodega + ", vids=" + Arrays.toString(vids.toArray()) + "]";
@@ -46,5 +66,7 @@ public class Bodega {
 	public List<Vid> getVids() {
 		return this.vids;
 	}
+
+
 	
 }
