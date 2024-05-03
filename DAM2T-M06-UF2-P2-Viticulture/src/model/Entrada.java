@@ -23,4 +23,9 @@ public class Entrada {
 	public String getInstruccion() {
 		return this.instruccion;
 	}
+
+	public void setInstructions(String string) {
+		// TODO Auto-generated method stub
+		instruccion = string;
+	}
 }
